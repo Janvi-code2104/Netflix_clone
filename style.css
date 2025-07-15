@@ -1,0 +1,522 @@
+@import url('https://fonts.googleapis.com/css2?family=Martel+Sans:wght@200;300;400;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Martel+Sans:wght@600&family=Poppins:wght@300;400;700&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: black;
+}
+
+/* Section home bg Start  */
+.home {
+    background-image: url("Image/bg.jpg");
+    background-position: center center;
+    background-size: max(2000px, 100vw);
+    background-repeat: no-repeat;
+    height: 98vh;
+    position: relative;
+}
+
+.home .dark-color {
+    background-color: rgba(0, 0, 0, 0.725);
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 98vh;
+    color: white;
+}
+
+/* Section nav Start  */
+nav {
+    max-width: 60vw;
+    height: 60px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    z-index: 1;
+    padding: 15px;
+}
+
+.menu {
+    position: relative;
+}
+
+nav img {
+    width: 160px;
+}
+
+.btn {
+    padding: 10px 15px;
+    font-weight: bold;
+    background-color: red;
+    color: white;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.menu .btnw {
+    /* appearance: none; 
+    -webkit-appearance: none;
+    -moz-appearance: none; */
+    padding: 7px 10px;
+    background-color: rgb(6, 0, 0);
+    border: 1px solid white;
+
+}
+
+/* for custom arrow in option */
+/* .menu::after {
+  content: ''; 
+  position: absolute;
+  right: 90px;
+  top: 15px;
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-top: 6px solid white;
+} */
+
+
+/* Section home-content Start  */
+.home-content {
+    font-family: "Martel Sans", sans-serif;
+    height: calc(100% - 60px);
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    position: relative;
+    padding: 30px;
+    text-align: center;
+}
+
+.home-content> :first-child {
+    /* max-width: 40vw; */
+    font-weight: 900;
+    font-size: 2.8rem;
+
+}
+
+.home-content .title {
+    font-weight: 700;
+    font-size: 1.3rem;
+}
+
+.home-content .sub-title {
+    font-weight: 400;
+    font-size: 1rem;
+}
+
+.home-subcontent .btnb,
+input[type="email"] {
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    color: white;
+}
+
+.home-subcontent input[type="email"] {
+    padding: 10px 80px;
+    border: 0.5px solid rgba(249, 247, 247, 0.818);
+    border-radius: 3px;
+    background-color: rgba(0, 0, 0, 0.156);
+}
+
+.home-subcontent input[type="email"]:hover {
+    border-radius: 2px;
+    border: 3px solid rgb(14, 13, 13);
+    outline: 1px solid white;
+    outline-offset: 3px;
+}
+
+/* Section curve Start  */
+.curve-line {
+    background-color: black;
+    height: 6px;
+    position: relative;
+    z-index: 10;
+}
+
+.curve-line::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 4px;
+    background: #ff007f;
+    border-top-left-radius: 50% 100%;
+    border-top-right-radius: 50% 100%;
+    box-shadow: 1px 20px 15px 11px rgb(29 73 139 / 33%);
+}
+
+main {
+    background-image: url("Image/bg2.jpg");
+    background-position: center center;
+    background-size: max(2000px, 100vw);
+    background-repeat: no-repeat;
+    height: 60vh;
+    position: relative;
+}
+
+/* Section hero first Start  */
+.trending-section {
+    padding: 20px 0;
+    margin-left: 50px;
+}
+
+.section-title {
+    font-size: 1.8em;
+    margin-bottom: 30px;
+    margin-left: 0;
+    color: #fff;
+}
+
+.trending-carousel {
+    display: flex;
+    overflow-x: scroll;
+    /* Enable horizontal scrolling */
+    -webkit-overflow-scrolling: touch;
+    /* Smooth scrolling on iOS devices */
+    scrollbar-width: none;
+    /* Hide scrollbar for Firefox */
+    -ms-overflow-style: none;
+    /* Hide scrollbar for IE/Edge */
+    padding-bottom: 20px;
+    /* Space for hidden scrollbar and potential shadows */
+    gap: 40px;
+}
+
+.carousel-item {
+    flex-shrink: 0;
+    width: 200px;
+    height: 300px;
+    margin-right: 10px;
+    position: relative;
+    /* For positioning the number overlay */
+    border-radius: 4px;
+    overflow: hidden;
+    /* Ensure image corners are rounded */
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.carousel-item:last-child {
+    margin-right: 50px;
+}
+
+.carousel-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+    display: block;
+}
+
+/* Number overlay styling */
+.item-number {
+    position: absolute;
+    bottom: 8px;
+    left: 8px;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    font-size: 1.2em;
+    font-weight: bold;
+    padding: 6px 12px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 20px;
+    min-height: 20px;
+    box-sizing: border-box;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+.carousel-item:hover {
+    transform: scale(1.08);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.6);
+    z-index: 10;
+}
+
+/* Section second third fourth Start  */
+.second {
+    margin-top: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    max-width: 80vw;
+    color: white;
+}
+
+.secImg {
+    position: relative;
+}
+
+.secImg img {
+    margin-top: 50px;
+    width: 500px;
+    position: relative;
+    /* z-index: 10; */
+}
+
+.secImg video {
+    position: absolute;
+    top: 110px;
+    right: 20px;
+    width: 450px;
+}
+
+section.second>div {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 34px 0;
+}
+
+section.second>div :nth-child(1) {
+    font-size: 48px;
+    font-weight: bolder;
+}
+
+section.second>div :nth-child(2) {
+    font-size: 20px;
+}
+
+.third {
+    margin-top: 0;
+    margin-bottom: 100px;
+}
+
+.fourth {
+    margin-bottom: 100px;
+}
+
+.FAQ {
+    color: white;
+}
+
+.FAQ h2 {
+    padding: 34px;
+    font-size: 30px;
+    text-align: center;
+}
+
+.FAQ .fq {
+    transition: all 1s ease-out;
+    max-width: 70vw;
+    margin: 10px auto;
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    align-items: center;
+    background-color: #232323;
+    padding: 24px;
+    font-size: 24px;
+}
+
+.FAQ .fq:hover {
+    background-color: #5e5a5a;
+}
+
+/* section footer start */
+
+footer {
+    color: rgba(255, 255, 255, 0.7);
+    max-width: 80vw;
+    margin: auto;
+    height: 70vh;
+}
+
+.questions {
+    padding: 34px 0;
+}
+
+.footer {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.footer-item {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    margin-bottom: 50px;
+}
+
+.footer-item a {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 14px;
+}
+
+footer .menu {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+footer .menu .btnw {
+    width: 110px;
+}
+
+footer .menu :nth-child(3) {
+    margin-bottom: 100px;
+}
+
+
+@media screen and (max-width:1000px) {
+    .home {
+        width: 100%;
+        height: 68vh;
+    }
+
+    .home-subcontent .btnb,
+    input[type="email"] {
+        padding: 10px 10px;
+        font-size: 0.5rem;
+    }
+
+    .home-subcontent input[type="email"] {
+        padding: 10px 50px;
+    }
+
+    nav {
+        max-width: 90vw;
+    }
+
+    nav img {
+        width: 100px;
+    }
+
+    .btn {
+        padding: 4px 8px;
+        font-size: 0.6rem;
+    }
+
+    .menu .btnw {
+        padding: 3px 3px;
+    }
+
+    main {
+        height: 40vh;
+    }
+
+    /* Section hero first Start  */
+    .trending-section {
+        margin-left: 15px;
+    }
+
+    .carousel-item {
+        width: 150px;
+        height: 225px;
+    }
+
+    .carousel-item:last-child {
+        margin-right: 15px;
+    }
+
+    .section-title {
+        font-size: 1.5em;
+    }
+
+    /* Section hero second Start  */
+    .second {
+        flex-wrap: wrap;
+        margin-top: 100px;
+    }
+
+    section.second>div {
+        padding: 14px 0;
+    }
+
+}
+
+@media (max-width: 500px) {
+
+    .home-content> :first-child {
+        font-size: 1.5rem;
+        font-weight: 900;
+    }
+
+    .home-content .title {
+        font-size: 1rem;
+        font-weight: 300;
+    }
+
+    .home-content .sub-title {
+        font-size: 0.6rem;
+    }
+
+    .home-subcontent .btnb,
+    input[type="email"] {
+        padding: 5px 5px;
+        font-size: 0.5rem;
+    }
+
+    .home-subcontent input[type="email"] {
+        padding: 5px 10px;
+    }
+
+    /* Section hero first Start  */
+    .trending-section {
+        margin-left: 10px;
+    }
+
+    .carousel-item {
+        width: 120px;
+        height: 180px;
+        margin-right: 8px;
+    }
+
+    .carousel-item:last-child {
+        margin-right: 10px;
+    }
+
+    .section-title {
+        font-size: 1.3em;
+    }
+
+    /* Section hero second Start  */
+
+    .second {
+        margin-top: 0px;
+        margin-bottom: 30px;
+    }
+
+    .secImg img {
+        width: 350px;
+    }
+
+    .secImg video {
+        width: 310px;
+        top: 85px;
+        right: 15px;
+    }
+
+    section.second>div :nth-child(1) {
+        font-size: 30px;
+        font-weight: bold;
+    }
+
+    section.second>div :nth-child(2) {
+        font-size: 15px;
+    }
+
+    /* section footer start */
+    .footer {
+        grid-template-columns: 1fr 1fr;
+        gap: 50px;
+    }
+
+    .FAQ .fq {
+        padding: 15px;
+        font-size: 14px;
+    }
+
+}
